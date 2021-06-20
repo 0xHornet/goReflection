@@ -55,7 +55,7 @@ func Scrape(urlSource URLSource, params []string) (err error) {
 	for r := range res {
 		progress.Increment()
 		if len(r.FoundParams) != 0 {
-			fmt.Printf("Scraped url: %s, found reflected params: %s\n", r.URL.URL, strings.Join(r.FoundParams, ", \n\n\n"))
+			fmt.Printf("Scraped url: %s, found reflected params: %s\n", r.URL.URL, strings.Join(r.FoundParams, ", "))
 		}
 	}
 
